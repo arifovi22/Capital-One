@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-       stage('version'){
+       stage('build'){
 steps{  
     bat 'mvn -version'
 		}
@@ -10,7 +10,8 @@ steps{
 steps{   
     bat 'mvn clean'
 		}
-       }stage('test'){
+       }
+       stage('test'){
 steps{
     bat 'mvn test'
 		}
